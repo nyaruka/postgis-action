@@ -1,6 +1,6 @@
-name: 'Setup PostgreSQL'
-description: 'Setup a PostgreSQL database'
-author: 'Harmon'
+name: 'Setup PostgreSQL and PostGIS'
+description: 'Setup a PostgreSQL database with PostGIS'
+author: 'Nyaruka'
 branding:
   icon: 'database'
   color: 'blue'
