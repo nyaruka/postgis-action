@@ -23,6 +23,10 @@ inputs:
     description: 'POSTGRES_PASSWORD - superuser password'
     required: false
     default: ''
+  postgresql init scripts:
+    description: 'POSTGRES_INIT_SCRIPTS - directory containing DB init scripts'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
