@@ -8,10 +8,14 @@ docker_run="$docker_run -e POSTGRES_PASSWORD=$INPUT_POSTGRESQL_PASSWORD"
 if [ ! -z "$INPUT_POSTGRESQL_INIT_SCRIPTS" ]
 then
   PWD=`pwd`
-  docker_run="$docker_run -v '$PWD/$INPUT_POSTGRESQL_INIT_SCRIPTS:/docker-entrypoint-initdb.d'"
+  INIT_DB_DIR="$PWD/$INPUT_POSTGRESQL_INIT_SCRIPTS"
+  
+  [ ! -d "$INIT_DB_DIR" ] && echo "WARNING: directory $INIT_DB_DIR DOES NOT exist"
+
+  docker_run="$docker_run -v '$INIT_DB_DIR:/docker-entrypoint-initdb.d'"
 fi
 
 docker_run="$docker_run -d -p 5432:5432 'mdillon/postgis:$INPUT_POSTGRESQL_VERSION'"
 
-echo "$docker_run"
+echo "RUNNING: $docker_run"
 sh -c "$docker_run"
