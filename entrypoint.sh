@@ -15,7 +15,10 @@ then
   docker_run="$docker_run -v '$INIT_DB_DIR:/docker-entrypoint-initdb.d'"
 fi
 
-docker_run="$docker_run -d -p 5432:5432 'mdillon/postgis:$INPUT_POSTGRESQL_VERSION'"
+docker_run="$docker_run --name postgis -d -p 5432:5432 'mdillon/postgis:$INPUT_POSTGRESQL_VERSION'"
 
 echo "RUNNING: $docker_run"
 sh -c "$docker_run"
+
+# give database a few seconds to initialize
+sleep 5
