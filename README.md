@@ -10,7 +10,7 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: nyaruka/postgis-action@v1
+- uses: nyaruka/postgis-action@v2.0.0
   with:
     postgresql version: '12'
     postgis version: '2.5'
