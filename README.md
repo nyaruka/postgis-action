@@ -11,7 +11,8 @@ Basic:
 steps:
 - uses: nyaruka/postgis-action@v1
   with:
-    postgresql version: '11'  # See https://hub.docker.com/_/postgres for available versions
+    postgresql version: '12'
+    postgis version: '2.5'
 ```
 
 # License
