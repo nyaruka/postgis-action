@@ -17,7 +17,6 @@ fi
 
 docker_run="$docker_run --name postgis -d -p 5432:5432 'postgis/postgis:$INPUT_POSTGRESQL_VERSION-$INPUT_POSTGIS_VERSION'"
 
-echo "RUNNING: $docker_run"
 sh -c "$docker_run"
 
 # give database a few seconds to initialize

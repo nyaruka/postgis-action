@@ -25,7 +25,7 @@ inputs:
     default: ''
   postgresql password:
     description: 'Superuser password'
-    required: false
+    required: true
     default: ''
   postgresql init scripts:
     description: 'Directory containing DB init scripts'

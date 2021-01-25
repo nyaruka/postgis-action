@@ -1,6 +1,7 @@
 # PostgreSQL GitHub Action
 
-This [GitHub Action](https://github.com/features/actions) sets up a PostgreSQL database with PostGIS.
+This [GitHub Action](https://github.com/features/actions) sets up a PostgreSQL database with PostGIS, 
+using the [postgis:postgis](https://hub.docker.com/r/postgis/postgis) Docker image.
 
 # Usage
 
@@ -13,6 +14,7 @@ steps:
   with:
     postgresql version: '12'
     postgis version: '2.5'
+    postgresql password: 'sesame'
 ```
 
 # License
