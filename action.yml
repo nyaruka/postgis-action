@@ -31,6 +31,10 @@ inputs:
     description: 'Directory containing DB init scripts'
     required: false
     default: ''
+  postgresql arguments:
+    description: 'Configuration command line arguments in the form --foo=bar'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
