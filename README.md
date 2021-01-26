@@ -10,11 +10,12 @@ See [action.yml](action.yml)
 Basic:
 ```yaml
 steps:
-- uses: nyaruka/postgis-action@v2.0.0
+- uses: nyaruka/postgis-action@v2.1.0
   with:
     postgresql version: '12'
     postgis version: '2.5'
     postgresql password: 'sesame'
+    postgresql arguments: '--jit=off'
 ```
 
 # License
