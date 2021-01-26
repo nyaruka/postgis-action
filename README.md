@@ -1,4 +1,4 @@
-# PostgreSQL GitHub Action
+# PostgreSQL+PostGIS GitHub Action
 
 This [GitHub Action](https://github.com/features/actions) sets up a PostgreSQL database with PostGIS, 
 using the [postgis:postgis](https://hub.docker.com/r/postgis/postgis) Docker image.
